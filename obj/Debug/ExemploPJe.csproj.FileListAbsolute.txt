@@ -1,0 +1,10 @@
+C:\Users\webma\source\repos\ExemploPJe\bin\Debug\ExemploPJe.exe.config
+C:\Users\webma\source\repos\ExemploPJe\bin\Debug\ExemploPJe.exe
+C:\Users\webma\source\repos\ExemploPJe\bin\Debug\ExemploPJe.pdb
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.Form1.resources
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.Properties.Resources.resources
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.csproj.GenerateResource.cache
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.csproj.CoreCompileInputs.cache
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.exe
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.pdb
+C:\Users\webma\source\repos\ExemploPJe\obj\Debug\ExemploPJe.csprojAssemblyReference.cache
