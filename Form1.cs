@@ -14,28 +14,28 @@ namespace ExemploPJe
         private void Button1_Click(object sender, EventArgs e)
         {
             Testar();
-            //Testar_PJE_TJMT();
         }
 
         private void Testar()
         {
-            string idConsultante = "75293730215";
-            string senhaConsultante = "admin123";
-            string numeroProcesso = "1002111-71.2018.8.11.0051";
+            string idConsultante = "02482451558";
+            string senhaConsultante = "Fis2047a";
+            string numeroProcesso = "8000597-16.2019.8.05.0141";
 
             string dataReferencia = "";
             bool movimentos = false;
             bool incluirCabecalho = false;
             bool incluirDocumentos = false;
-            tipoDocumento documento = null;
+            PJeTRF3.tipoDocumento documento = null;
 
             string mensagem;
-            tipoProcessoJudicial tipoProcesso;
+            PJeTRF3.tipoProcessoJudicial tipoProcesso;
 
             try
             {
 
-                servicointercomunicacao222Client client = new servicointercomunicacao222Client();
+                PJeTRF3.servicointercomunicacao222Client client = new PJeTRF3.servicointercomunicacao222Client();
+
                 var result = client.consultarProcesso(idConsultante,
                                                       senhaConsultante,
                                                       numeroProcesso,
@@ -49,43 +49,6 @@ namespace ExemploPJe
 
                 //string auxMensagem = ((result) ? "Consulta de processo executada com sucesso. " : "Erro ao executar consulta de processo");
                 //MessageBox.Show($"{auxMensagem}{Environment.NewLine}{mensagem}{Environment.NewLine}Processo: {tipoProcesso.dadosBasicos.numero}");
-
-            }
-            catch (Exception ex)
-            {
-                txtResult.Text = ex.Message;
-            }
-        }
-
-        private void Testar_PJE_TJMT()
-        {
-            string idConsultante = "";
-            string senhaConsultante = "";
-            string numeroProcesso = "1002111-71.2018.8.11.0051";
-
-            string dataReferencia = "";
-            bool movimentos = false;
-            bool incluirCabecalho = false;
-            bool incluirDocumentos = false;
-            string[] documento = null;
-
-            string mensagem;
-            PJeTMT.tipoProcessoJudicial tipoProcesso;
-
-            try
-            {
-
-                PJeTMT.servicointercomunicacao222Client client = new PJeTMT.servicointercomunicacao222Client();
-                var result = client.consultarProcesso(idConsultante,
-                                                      senhaConsultante,
-                                                      numeroProcesso,
-                                                      dataReferencia,
-                                                      movimentos,
-                                                      incluirCabecalho,
-                                                      incluirDocumentos,
-                                                      documento,
-                                                      out mensagem,
-                                                      out tipoProcesso);
 
             }
             catch (Exception ex)

@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\PJeTMT\Reference.cs">
+    <Compile Include="Connected Services\PJeTRF3\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -79,37 +79,37 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.confirmarRecebimentoResponse.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.confirmarRecebimentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.consultarAlteracaoResponse.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.consultarAlteracaoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.consultarAvisosPendentesResponse.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.consultarAvisosPendentesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.consultarProcessoResponse.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.consultarProcessoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.consultarTeorComunicacaoResponse.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.consultarTeorComunicacaoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.entregarManifestacaoProcessualResponse.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.entregarManifestacaoProcessualResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.tipoAvisoComunicacaoPendente.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.tipoAvisoComunicacaoPendente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.tipoComunicacaoProcessual.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.tipoComunicacaoProcessual.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.tipoParametro.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.tipoParametro.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\ExemploPJe.PJeTMT.tipoProcessoJudicial.datasource">
+    <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.tipoProcessoJudicial.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTMT\IntercomunicacaoService.wsdl" />
+    <None Include="Connected Services\PJeTRF3\IntercomunicacaoService.wsdl" />
     <None Include="Connected Services\PJe\ExemploPJe.PJe.confirmarRecebimentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -158,7 +158,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\PJeTMT\" />
+    <WCFMetadataStorage Include="Connected Services\PJeTRF3\" />
     <WCFMetadataStorage Include="Connected Services\PJe\" />
   </ItemGroup>
   <ItemGroup>
@@ -174,13 +174,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\PJeTMT\configuration91.svcinfo" />
+    <None Include="Connected Services\PJeTRF3\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\PJeTMT\configuration.svcinfo" />
+    <None Include="Connected Services\PJeTRF3\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\PJeTMT\Reference.svcmap">
+    <None Include="Connected Services\PJeTRF3\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
