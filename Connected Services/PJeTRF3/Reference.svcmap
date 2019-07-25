@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://pje1gt.trf3.jus.br/pje/intercomunicacao?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://pje2g.trf3.jus.br/pje/intercomunicacao?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="IntercomunicacaoService.wsdl" MetadataType="Wsdl" ID="5d4dc0db-7603-4800-9fa0-ef8778a54912" SourceId="1" SourceUrl="https://pje1gt.trf3.jus.br/pje/intercomunicacao?wsdl" />
+    <MetadataFile FileName="IntercomunicacaoService.wsdl" MetadataType="Wsdl" ID="7d9edc50-4173-4907-a9ce-c02a1cadadea" SourceId="1" SourceUrl="https://pje2g.trf3.jus.br/pje/intercomunicacao?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -623,7 +623,7 @@
   </wsdl:binding>
   <wsdl:service name="IntercomunicacaoService">
     <wsdl:port name="IntercomunicacaoImplPort" binding="tns:IntercomunicacaoServiceSoapBinding">
-      <soap:address location="https://pje1gt.trf3.jus.br/pje/intercomunicacao" />
+      <soap:address location="http://pje2g.trf3.jus.br/pje/intercomunicacao" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

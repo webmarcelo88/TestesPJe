@@ -1,4 +1,4 @@
-﻿using ExemploPJe.PJe;
+﻿using ExemploPJe.PJeTRF3;
 using System;
 using System.Windows.Forms;
 
@@ -13,48 +13,45 @@ namespace ExemploPJe
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Testar();
-        }
-
-        private void Testar()
-        {
-            string idConsultante = "02482451558";
-            string senhaConsultante = "Fis2047a";
-            string numeroProcesso = "8000597-16.2019.8.05.0141";
-
-            string dataReferencia = "";
-            bool movimentos = false;
-            bool incluirCabecalho = false;
-            bool incluirDocumentos = false;
-            PJeTRF3.tipoDocumento documento = null;
-
-            string mensagem;
-            PJeTRF3.tipoProcessoJudicial tipoProcesso;
-
             try
             {
-
-                PJeTRF3.servicointercomunicacao222Client client = new PJeTRF3.servicointercomunicacao222Client();
-
-                var result = client.consultarProcesso(idConsultante,
-                                                      senhaConsultante,
-                                                      numeroProcesso,
-                                                      dataReferencia,
-                                                      movimentos,
-                                                      incluirCabecalho,
-                                                      incluirDocumentos,
-                                                      documento,
-                                                      out mensagem,
-                                                      out tipoProcesso);
-
-                //string auxMensagem = ((result) ? "Consulta de processo executada com sucesso. " : "Erro ao executar consulta de processo");
-                //MessageBox.Show($"{auxMensagem}{Environment.NewLine}{mensagem}{Environment.NewLine}Processo: {tipoProcesso.dadosBasicos.numero}");
-
+                string numeroProcesso = "8000597-16.2019.8.05.0141";
+                buscarProcesso(numeroProcesso);
             }
             catch (Exception ex)
             {
                 txtResult.Text = ex.Message;
             }
         }
+
+        private static tipoProcessoJudicial buscarProcesso(string num)
+        {
+            tipoProcessoJudicial processo = new tipoProcessoJudicial();
+
+            try
+            {
+                servicointercomunicacao222Client ws = new servicointercomunicacao222Client();
+                
+                consultarProcesso inValue = new consultarProcesso();
+                inValue.numeroProcesso = num;
+
+                string mensagem = "";
+                tipoProcessoJudicial tipoProcesso = new tipoProcessoJudicial();
+                consultarProcessoResponse retVal = new consultarProcessoResponse();
+                mensagem = retVal.mensagem;
+                tipoProcesso = retVal.processo;
+                //string[] documento = inValue.documento;
+
+                bool passa = ws.consultarProcesso("teste", "teste", inValue.numeroProcesso, "", true, true, true, null, out mensagem, out tipoProcesso);
+
+                return processo;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu algum erro na integração com o ts. " + ex.Message);
+            }
+        }
+
     }
 }
