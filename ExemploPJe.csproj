@@ -107,7 +107,7 @@
     <None Include="Connected Services\PJeTRF3\ExemploPJe.PJeTRF3.tipoProcessoJudicial.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PJeTRF3\IntercomunicacaoService.wsdl" />
+    <None Include="Connected Services\PJeTRF3\IntercomunicacaoService1.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

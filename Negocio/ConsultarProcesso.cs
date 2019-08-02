@@ -29,12 +29,21 @@ namespace ExemploPJe.Negocio
 
             string mensagem;
             PJeTRF3.tipoProcessoJudicial tipoProcesso = null;
-            PJeTRF3.tipoDocumento tipoDocumento = null;
+            string[] tipoDocumento = null;
 
             try
             {
                 PJeTRF3.servicointercomunicacao222Client client = new PJeTRF3.servicointercomunicacao222Client();
-                client.consultarProcesso(pFiltro.IdConsultante, pFiltro.SenhaConsultante, pFiltro.NumeroProcesso, pFiltro.DataReferencia, pFiltro.Movimentos, pFiltro.IncluirCabecalho, pFiltro.IncluirDocumentos, tipoDocumento, out mensagem, out tipoProcesso);
+                client.consultarProcesso(pFiltro.IdConsultante, 
+                                         pFiltro.SenhaConsultante, 
+                                         pFiltro.NumeroProcesso, 
+                                         pFiltro.DataReferencia, 
+                                         pFiltro.Movimentos, 
+                                         pFiltro.IncluirCabecalho, 
+                                         pFiltro.IncluirDocumentos, 
+                                         tipoDocumento, 
+                                         out mensagem, 
+                                         out tipoProcesso);
             }
             catch (Exception ex)
             {

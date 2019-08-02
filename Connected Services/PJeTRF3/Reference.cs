@@ -3012,12 +3012,12 @@ namespace ExemploPJe.PJeTRF3 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=7)]
         [System.Xml.Serialization.XmlElementAttribute("documento", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", IsNullable=true)]
-        public tipoDocumento documento;
+        public string[] documento;
         
         public consultarProcesso() {
         }
         
-        public consultarProcesso(string idConsultante, string senhaConsultante, string numeroProcesso, string dataReferencia, bool movimentos, bool incluirCabecalho, bool incluirDocumentos, tipoDocumento documento) {
+        public consultarProcesso(string idConsultante, string senhaConsultante, string numeroProcesso, string dataReferencia, bool movimentos, bool incluirCabecalho, bool incluirDocumentos, string[] documento) {
             this.idConsultante = idConsultante;
             this.senhaConsultante = senhaConsultante;
             this.numeroProcesso = numeroProcesso;
@@ -3138,7 +3138,7 @@ namespace ExemploPJe.PJeTRF3 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute("documento", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2")]
-        public ExemploPJe.PJeTRF3.tipoDocumento[] documento;
+        public string[] documento;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2")]
@@ -3151,7 +3151,7 @@ namespace ExemploPJe.PJeTRF3 {
         public entregarManifestacaoProcessual() {
         }
         
-        public entregarManifestacaoProcessual(string idManifestante, string senhaManifestante, string numeroProcesso, ExemploPJe.PJeTRF3.tipoCabecalhoProcesso dadosBasicos, ExemploPJe.PJeTRF3.tipoDocumento[] documento, string dataEnvio, ExemploPJe.PJeTRF3.tipoParametro[] parametros) {
+        public entregarManifestacaoProcessual(string idManifestante, string senhaManifestante, string numeroProcesso, ExemploPJe.PJeTRF3.tipoCabecalhoProcesso dadosBasicos, string[] documento, string dataEnvio, ExemploPJe.PJeTRF3.tipoParametro[] parametros) {
             this.idManifestante = idManifestante;
             this.senhaManifestante = senhaManifestante;
             this.numeroProcesso = numeroProcesso;
@@ -3298,7 +3298,7 @@ namespace ExemploPJe.PJeTRF3 {
             return base.Channel.consultarProcesso(request);
         }
         
-        public bool consultarProcesso(string idConsultante, string senhaConsultante, string numeroProcesso, string dataReferencia, bool movimentos, bool incluirCabecalho, bool incluirDocumentos, tipoDocumento documento, out string mensagem, out ExemploPJe.PJeTRF3.tipoProcessoJudicial processo) {
+        public bool consultarProcesso(string idConsultante, string senhaConsultante, string numeroProcesso, string dataReferencia, bool movimentos, bool incluirCabecalho, bool incluirDocumentos, string[] documento, out string mensagem, out ExemploPJe.PJeTRF3.tipoProcessoJudicial processo) {
             ExemploPJe.PJeTRF3.consultarProcesso inValue = new ExemploPJe.PJeTRF3.consultarProcesso();
             inValue.idConsultante = idConsultante;
             inValue.senhaConsultante = senhaConsultante;
@@ -3344,7 +3344,7 @@ namespace ExemploPJe.PJeTRF3 {
             return base.Channel.entregarManifestacaoProcessual(request);
         }
         
-        public bool entregarManifestacaoProcessual(string idManifestante, string senhaManifestante, string numeroProcesso, ExemploPJe.PJeTRF3.tipoCabecalhoProcesso dadosBasicos, ExemploPJe.PJeTRF3.tipoDocumento[] documento, string dataEnvio, ExemploPJe.PJeTRF3.tipoParametro[] parametros, out string mensagem, out string protocoloRecebimento, out string dataOperacao, out byte[] recibo, out ExemploPJe.PJeTRF3.tipoParametro[] parametro) {
+        public bool entregarManifestacaoProcessual(string idManifestante, string senhaManifestante, string numeroProcesso, ExemploPJe.PJeTRF3.tipoCabecalhoProcesso dadosBasicos, string[] documento, string dataEnvio, ExemploPJe.PJeTRF3.tipoParametro[] parametros, out string mensagem, out string protocoloRecebimento, out string dataOperacao, out byte[] recibo, out ExemploPJe.PJeTRF3.tipoParametro[] parametro) {
             ExemploPJe.PJeTRF3.entregarManifestacaoProcessual inValue = new ExemploPJe.PJeTRF3.entregarManifestacaoProcessual();
             inValue.idManifestante = idManifestante;
             inValue.senhaManifestante = senhaManifestante;

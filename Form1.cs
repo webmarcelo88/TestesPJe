@@ -1,6 +1,7 @@
 ﻿using ExemploPJe.PJeTRF3;
 using System;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ExemploPJe
 {
@@ -13,10 +14,38 @@ namespace ExemploPJe
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            buscarProcesso();
+        }
+
+        private void BtnEnviar_Click(object sender, EventArgs e)
+        {
+            entregarProcesso();
+        }
+
+        private void entregarProcesso()
+        {
             try
             {
-                string numeroProcesso = "8000597-16.2019.8.05.0141";
-                buscarProcesso(numeroProcesso);
+                string[] tipoDocumento = new string[] { };
+
+                string mensagem, protocoloRecebimento, dataOperacao;
+                byte[] recibo;
+                tipoParametro[] tipoParametro;
+
+                servicointercomunicacao222Client ws = new servicointercomunicacao222Client();
+
+                ws.entregarManifestacaoProcessual(txtUsuario.Text,
+                                                  txtSenha.Text,
+                                                  txtProcesso.Text,
+                                                  new tipoCabecalhoProcesso(),
+                                                  tipoDocumento,
+                                                  string.Empty,
+                                                  null,
+                                                  out mensagem,
+                                                  out protocoloRecebimento,
+                                                  out dataOperacao,
+                                                  out recibo,
+                                                  out tipoParametro);
             }
             catch (Exception ex)
             {
@@ -24,7 +53,7 @@ namespace ExemploPJe
             }
         }
 
-        private static tipoProcessoJudicial buscarProcesso(string num)
+        private void buscarProcesso()
         {
             tipoProcessoJudicial processo = new tipoProcessoJudicial();
 
@@ -33,25 +62,26 @@ namespace ExemploPJe
                 servicointercomunicacao222Client ws = new servicointercomunicacao222Client();
                 
                 consultarProcesso inValue = new consultarProcesso();
-                inValue.numeroProcesso = num;
 
-                string mensagem = "";
-                tipoProcessoJudicial tipoProcesso = new tipoProcessoJudicial();
-                consultarProcessoResponse retVal = new consultarProcessoResponse();
-                mensagem = retVal.mensagem;
-                tipoProcesso = retVal.processo;
-                //string[] documento = inValue.documento;
+                string mensagem;
+                tipoProcessoJudicial tipoProcesso;
 
-                bool passa = ws.consultarProcesso("teste", "teste", inValue.numeroProcesso, "", true, true, true, null, out mensagem, out tipoProcesso);
-
-                return processo;
-
+                ws.consultarProcesso(txtUsuario.Text,
+                                    txtSenha.Text,
+                                    txtProcesso.Text,
+                                    string.Empty, 
+                                    true, 
+                                    true, 
+                                    true, 
+                                    null, 
+                                    out mensagem, 
+                                    out tipoProcesso);
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu algum erro na integração com o ts. " + ex.Message);
+                txtResult.Text = ex.Message;
             }
         }
-
+        
     }
 }
